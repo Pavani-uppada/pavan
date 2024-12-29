@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration Form</title>
+  </head>
+  <body>
+    <h1>Event Registration Form</h1>
+    <form method="POST" action="submit.html" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br /><br />
+
+        <label for="contact">Contact Number:</label>
+        <input type="number" id="contact" name="contact" required />
+        <br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br /><br />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Optional" />
+        <br /><br />
+
+        <label for="location">City:</label>
+        <input
+          list="cities"
+          id="location"
+          name="location"
+          placeholder="Choose or type your city"
+        />
+        <datalist id="cities">
+          <option value="New York"></option>
+          <option value="San Francisco"></option>
+          <option value="Chicago"></option>
+          <option value="Los Angeles"></option>
+          <option value="Seattle"></option>
+        </datalist>
+
+        <br /><br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Event Details</legend>
+
+        <label for="ticket">Ticket Type:</label>
+        <select id="ticket" name="ticket">
+          <option value="general">General</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option>
+        </select>
+        <br /><br />
+
+        <label>Sessions to Attend:</label>
+        <input type="checkbox" id="keynote" name="sessions" value="keynote" />
+        <label for="keynote">Keynote</label>
+        <input
+          type="checkbox"
+          id="networking"
+          name="sessions"
+          value="networking"
+        />
+        <label for="networking">Networking</label>
+        <input
+          type="checkbox"
+          id="workshops"
+          name="sessions"
+          value="workshops"
+        />
+        <label for="workshops">Workshops</label>
+        <input type="checkbox" id="panels" name="sessions" value="panels" />
+        <label for="panels">Panel Discussions</label>
+        <br /><br />
+
+        <label>Food Preference:</label>
+        <input type="radio" id="veg" name="food" value="vegetarian" required />
+        <label for="veg">Vegetarian</label>
+        <input type="radio" id="nonveg" name="food" value="non-vegetarian" />
+        <label for="nonveg">Non-Vegetarian</label>
+        <input type="radio" id="vegan" name="food" value="vegan" />
+        <label for="vegan">Vegan</label>
+        <br /><br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input
+          type="url"
+          id="linkedin"
+          name="linkedin"
+          placeholder="https://linkedin.com/in/username"
+        />
+        <br /><br />
+
+        <label for="comments">Comments or Preferences:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="50"
+          placeholder="Enter any additional comments here..."
+        ></textarea>
+        <br /><br />
+
+        <label for="profilePic">Upload Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+        <br /><br />
+
+        <label for="techSavvy">Tech Savviness (1-10):</label>
+        <input
+          type="range"
+          id="techSavvy"
+          name="techSavvy"
+          min="1"
+          max="10"
+          oninput="output.value = this.value"
+        />
+        <output name="output" for="techSavvy">5</output>
+        <br /><br />
+      </fieldset>
+      <br />
+      <label>
+        <input type="checkbox" name="agreement" required /> I agree to the terms
+        and conditions
+      </label>
+      <br /><br />
+
+      <button type="submit">Submit Registration</button>
+      <button type="reset">Reset Form</button>
+    </form>
+  </body>
+</html>

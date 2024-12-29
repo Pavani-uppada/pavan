@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=span.css>
+    <style>
+     h1 + p+ p + p{
+    color: green;
+    font-style:italic;
+    }
+    h1:hover{
+        color: red;
+        font-style:italic;
+    }
+    button:hover{
+        background-color:green;
+        cursor: pointer;
+        border:none;
+        border-radius: 0px;
+        padding: 15px 60px;
+    }
+    a:hover{
+   background: red;
+}
+a:active{
+    color: yellow;
+}
+[placeholder]{
+    color:red;
+    border: 2px solid green;
+}
+input[type="text"]{
+    padding: 10px 20px;
+    margin: 10x;
+    border: 1x ;
+
+    color:yellow;
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+          Span #1, in the div.
+          <span>Span #2, in the span that's in the div.</span>
+        </span>
+      </div>
+      <span>Span #3, not in the div at all.</span>
+      <p>form</p>
+      <button>submit</button>
+      <p>
+        This paragraph contains a link:
+        <a href="#">This link will turn red while you click on it.</a>
+        The paragraph will get a gray background while you click on it or the link.
+      </p>
+      <input type="text" placeholder=" text Enter "/>
+      <input type="password" placeholder=" password "/>
+      
+
+    
+</body>
+</html>
